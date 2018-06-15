@@ -6,6 +6,8 @@ pipeline {
             steps {
 		withCredentials([sshUserPrivateKey(credentialsId: 'SSH_KEY', keyFileVariable: 'SSH_KEY', passphraseVariable: '', usernameVariable: 'root')]) {
     			echo "I got access"
+			println env.SSH_KEY
+			sh 'echo $SSH_KEY'
 		}
 
             }
