@@ -1,3 +1,4 @@
+@Library('lib') import new.new
 pipeline {
     agent any
 
@@ -15,6 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+		new.new '5'
             }
         }
         stage('Deploy') {
