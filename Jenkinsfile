@@ -16,7 +16,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-		new.new '5'
+		withCredentials([sshUserPrivateKey(credentialsId: 'SSH_GIT', keyFileVariable: 'SSH_GIT', passphraseVariable: '', usernameVariable: 'vrakivnenko')]) {
+			new.new '5'
+		}
             }
         }
         stage('Deploy') {
