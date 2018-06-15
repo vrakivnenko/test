@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 def call (int numb) {
         if (numb % 2 == 0) {
                 pipeline {
