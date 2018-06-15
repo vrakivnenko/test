@@ -1,4 +1,4 @@
-def new(int numb) {
+def call (int numb) {
         if (numb % 2 == 0) {
                 pipeline {
                         agent any
