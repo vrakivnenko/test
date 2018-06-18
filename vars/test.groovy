@@ -1,5 +1,10 @@
 #!/usr/bin/env groovy
 def call (syntax) {
-	echo syntax
+	if (syntax) {
+		echo syntax
+	}
+	else {
+		echo 'NOP'
+	}
 }
 	
