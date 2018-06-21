@@ -1,10 +1,12 @@
 #!/usr/bin/env groovy
 def call (syntax) {
 	if (syntax) {
-		echo syntax
+		sh "echo $syntax"
+		res=0 
 	}
 	else {
-		echo 'NOP'
+		sh "echo 'NOPE'"
+		res=3
 	}
 }
 	
