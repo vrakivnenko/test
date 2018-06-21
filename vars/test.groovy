@@ -8,6 +8,6 @@ def call (syntax) {
 		sh "echo 'NOPE'"
 		res="3"
 	}
-	return $res
+	return res
 }
 	
