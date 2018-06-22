@@ -1,6 +1,6 @@
 #!/bin/bash
 errors=0
-for i in $( find /Users/vrakivnenko/Documents -name "*.sh" );
+for i in $( find $GIT_URL -name "*.sh" );
 do
     if shellcheck "$i";
     then
