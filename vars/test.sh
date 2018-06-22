@@ -12,3 +12,4 @@ da(){
     done
     return "$errors"
 }
+da
