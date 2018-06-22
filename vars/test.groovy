@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def call (syntax) {
+def call (env.GIT_URL) {
 	def errors
 	errors = sh "./test.sh &> $(date +'%d/%m/%Y/%H/%M').log"
 	if (errors) {
