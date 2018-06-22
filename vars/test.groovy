@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 def call (env.GIT_URL) {
 	def err
-	err = sh "./test.sh &> $(date +'%d/%m/%Y/%H/%M').log"
+	sh "ls -l"
+	err = sh "./test.sh &> $(date +'%d_%m_%Y_%H_%M').log"
 	if (err) {
 		sh "echo 'Nice job'"
 		res="0" 
