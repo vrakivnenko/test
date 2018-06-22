@@ -8,7 +8,7 @@ def call () {
 	writeFile(file: 'test_lib.sh', text: "${script_content}")
 	sh "set -x; chmod a+x test_lib.sh; ls -l; cat test_lib.sh;"
 	
-	def err = sh(script: "./test_lib.sh &> $(date +'%d_%m_%Y_%H_%M').log", returnStatus: true)
+	def err = sh(script: "./test_lib.sh ", returnStatus: true)
 	println(err)
 	// if (err) {
 	// 	sh "echo 'Nice job'"
@@ -18,6 +18,6 @@ def call () {
 	// 	sh "echo 'NOPE'"
 	// 	res="3"
 	// }
-	// return res
+	// return res              &> $(date +'%d_%m_%Y_%H_%M').log
 }
 	
