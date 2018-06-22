@@ -6,14 +6,14 @@ def call () {
 	writeFile file: 'test_lib', text: 'script_content'
 	sh "set -x; echo test_lib"
 	def err = sh "script_content &> $(date +'%d_%m_%Y_%H_%M').log"
-	if (err) {
-		sh "echo 'Nice job'"
-		res="0" 
-	}
-	else {
-		sh "echo 'NOPE'"
-		res="3"
-	}
+	// if (err) {
+	// 	sh "echo 'Nice job'"
+	// 	res="0" 
+	// }
+	// else {
+	// 	sh "echo 'NOPE'"
+	// 	res="3"
+	// }
 	return res
 }
 	
