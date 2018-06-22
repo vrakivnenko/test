@@ -9,7 +9,7 @@ def call () {
 	sh "set -x; chmod a+x test_lib.sh; ls -l; cat test_lib.sh;"
 	
 	def err = sh(script: "./test_lib.sh &> $(date +'%d_%m_%Y_%H_%M').log", returnStatus: true)
-	sh "$err"
+	println(err)
 	// if (err) {
 	// 	sh "echo 'Nice job'"
 	// 	res="0" 
