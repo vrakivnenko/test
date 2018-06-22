@@ -8,7 +8,8 @@ def call () {
 	writeFile file: 'test_lib.sh', text: "libraryResource 'test.sh'"
 	sh "set -x; cat test_lib.sh"
 
-	err = sh "test_lib.sh &> $(date +'%d_%m_%Y_%H_%M').log"
+	def err = sh "test_lib.sh" 
+	// &> $(date +'%d_%m_%Y_%H_%M').log"
 	// if (err) {
 	// 	sh "echo 'Nice job'"
 	// 	res="0" 
