@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+// Need to be used with parameter which is PATH to script
 def call (check) {
 
     println check
