@@ -6,9 +6,9 @@ def call (check) {
     if (score.toInteger() > 8) {
         echo "your code is exellent"
         return "0"
-    } else if (score.toInteger() > 0) {
-        echo "your code good enough, but can be better"
-        return "0"
+    // } else if (score.toInteger() > 0) {
+    //     echo "your code good enough, but can be better"
+    //     return "0"
     } else {
         echo "you need to work on your code it`s terrible"
         return "1"
