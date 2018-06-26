@@ -2,8 +2,8 @@
 def call (check) {
 
     println check
-	def score = sh(script: "pylint -d C,R $check 2> /dev/null" , returnStdout: true)
-    // "| grep rate | awk '{print $7}' | awk -F \"/\" '{print $1}' | awk -F \".\" '{print $1}'"
+	def score = sh(script: "pylint -d C,R $check 2> /dev/null | grep rate" , returnStdout: true)
+    // " | awk '{print $7}' | awk -F \"/\" '{print $1}' | awk -F \".\" '{print $1}'"
     println score
     // if (score.toInteger() > 8) {
     //     echo "your code is exellent"
