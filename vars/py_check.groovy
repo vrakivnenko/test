@@ -1,9 +1,8 @@
 #!/usr/bin/env groovy
 def call (check) {
 
-    echo "check"
     println check
-	def score = sh "pylint -d C,R $check 2>dev/null | grep rate | awk '{print $7}' | awk -F \"/\" '{print $1}' | awk -F \".\" '{print $1}'"
+	def score = sh "echo pwd; pylint -d C,R $check 2>dev/null | grep rate | awk '{print $7}' | awk -F \"/\" '{print $1}' | awk -F \".\" '{print $1}'"
     if (score > 8) {
         echo "your code is exellent"
         return "0"
